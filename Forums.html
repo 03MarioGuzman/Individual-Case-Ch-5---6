@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<Title> Forums </Title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="mainstyles.css">
+<script src= "modernizer.custom.65897.js"></script>
+</head>
+<div id="wrapper">
+<body>
+<header>
+<h1 style = "text-align:center;"> Welcome to the Forums</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="main.html">Main</a></li>
+    <li><a href="Forums.html">Form</a></li> 
+    <li><a href="about.html">About</a></li>
+	<li><a href ="Web security.html">Web Secruity</a></li>
+  </ul>
+ 
+</nav>
+<main>
+<form name = "form" method = "post" onsubmit = "return validateForm()">
+	<fieldset id = "Info">
+	<label for = "fname">First Name:
+	</label><br>
+	<input type="text" id = "fname" name = "fname" value = "" ><br>
+	<label for ="lname">Last Name:</label><br>
+	<input type = "text" id ="lname" name = "lname"  value = ""/><br><br>
+	<label for = "email">Email:</label><br>
+	<input type = "text" id = "email" name = "email" value = ""  /><br><br>
+	<label for = "Age">Age: </label><br>
+	<input type = "number" id = "age"/><br><br>
+	<input type = "checkBox" id = "Male" >
+	<label for = "Male">Male</label>
+	<input type = "checkBox" id = "Female" >
+	<label for = "Female">Female</label><br><br>
+	<label for = "histroy">History Knowgele</label><br>
+	<select id = "knowgele" name = "histroy">
+		<option value = "" > </option>
+		<option value = "Some">Some History</option>
+		<option value = "degree">History degree</option>
+	
+	</select><br>
+	<input type = "submit" value = "Submit"/>
+	<span role = "alert">
+	</fieldset>
+</form>
+
+</main>
+<script>
+
+
+function validateForm(){
+	if(document.form.fname.value == "" && document.form.lname.value == ""){
+		alert("Name need");
+		return false
+	}
+	
+	if(document.form.histroy.selectedIndex == ""){
+		alert("Please your history of knowgele");
+		return false;
+	}
+	
+	if(document.form.Male.checked == false && document.form.Female.checked == false){
+		alert("Select Gender");
+		return false;
+	}
+	
+}
+
+		
+</script>
+</body>
+<footer>
+<h3>Here is our contact infomation</h3>
+<h4> Phone Number:(909)-785-5947 </h4>
+<h5>Copyright &copy; 2023 Mario Guzman</h5>
+</footer>
+</html>
